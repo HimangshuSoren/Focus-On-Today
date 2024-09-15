@@ -1,5 +1,6 @@
-const message = document.querySelector('.message')
-const today = document.querySelector('.today')
-today.addEventListener('click',()=>{
-    message.classList.toggle('visible')
+const checkbox = document.querySelector('.checkbox')
+const check = document.querySelector('.tick')
+checkbox.addEventLAllistener('click',()=>{
+    check.classList.toggle('vis')
+
 })

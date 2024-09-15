@@ -1,95 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-    --red-color: rgba(255, 81, 81, 1);
-    --background-color: rgba(72, 163, 0, 0.1);
-}
-
 *{
-    font-family: 'Poppins';  
-}
-.heading{
-    text-align: center;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 96px;
+    font-family: 'Poppins';
 }
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(72, 163, 0, 0.1);;
+    background-color: rgba(72, 163, 0, 0.1);
 }
-.green{
-    color: rgba(72, 163, 0, 1);
+.title{
+    cursor: default;
+    text-align: center;
+    font-size: 64px;
+    color: rgba(72, 163, 0, 1); 
 }
-.brown{
-    color: rgba(97, 72, 28, 1);
+.title>span{
+    color: rgba(97, 72, 28, 1);;
 }
-.container{
-    background-color: rgba(251, 251, 251, 1);
-    width: 660px;
-    height: 810px;
+.no-select::selection{
+   background-color: transparent;
+}
+.app-container{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: rgb(251,251,251,1);
+    max-width: 660px;
+    /* margin: 0 auto; */  
+    margin-inline: auto;
     border-radius: 15px;
-    margin-bottom: 50px;
+    padding: 32px 42px;
 }
-.today{
-    
-    font-size: 32px;
-    margin: 20px 60px ;
-    position: relative;
-    font-weight: 700;
+.sun-icon{
+    vertical-align: middle;
+    margin-left: 16px;
 }
-.quote{
-    color: rgba(133, 133, 133, 1);
-    margin: 30px 60px;
+main{
+    margin: 16px;
+    /* padding-bottom: 52px; */
+}
+.instruction{
+    color: #858586;
+    margin-bottom: 18px;
 }
 .progress-bar{
-    width: 540px;
     height: 30px;
-    background-color:rgba(72, 163, 0, 0.1); ;
-    border-radius: 15px;
-    margin: 0px 60px;
+    background-color: rgba(72, 163, 0, 0.1);
+    border-radius: 20px;
 }
-.message{
-    font-size: 14px;
+.progress{
+    height: 100%;
+    width: 33.3%;
+    background-color: rgba(72, 163, 0, 1); 
+    border-radius:20px ;
     font-weight: 400;
-    color: var(--red-color);
-    /* visibility: hidden; */
-    text-align: left;
-    margin: 30px 60px
-}
-.gl{
-    width: 540px;
-    height: 82px;
-    border-radius: 17px;
-    border: 1px 0px 0px 0px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    margin: 0px 60px 30px;
+    font-size: 14px;
+    color: white;
+    /* padding: 5px; */
+    padding-left: 40px;
     display: flex;
-    background-color: white;
     align-items: center;
 }
-.visible{
+.error-label{
+    margin-top: 18px;
+    color: red;
+    font-size: 14px;
+
+}
+.goal-container{
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 46px;
+
+}
+.checkbox{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:2px solid rgb(203, 203, 203);
+    margin-left: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.goal-input{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(90, 90, 90);
+
+}
+.goal-input::placeholder{
+    color: rgba(0, 0, 0, 0.3);
+}
+.quote{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.credits{
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 52px;
+}
+.tick{
+    background-color: rgba(72, 163, 0, 1);
+    width: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.vis{
     visibility: hidden;
 }
-.circle{
-    border: 2px solid rgba(97, 72, 28, 0.3);
-    border-radius: 50%;
-    margin: 0px 25px;
-    height: 24px;
-    width: 24px;
+
+@media (max-width: 768px){
+    .title{
+        font-size: 32px;
+    }
+    .subtitle{
+        font-size: 22px;
+    }
+    .app-container{
+        padding: 16px 25px;
+    }
+    .sun-icon{
+        margin-left: 8px;
+        width: 35px;
+    }
+    .progress, .progress-bar{
+        height: 20px;
+    }
+    .progress{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .error-label{
+        font-size: 12px;
+        font-weight: 400;
+    }
+
 }
-.goal-wt{
-    color: rgba(217, 217, 217, 1);
-}
-.motivation{
-    font-weight: 500;
-    margin: 60px 0px;
-    text-align: center;
-}
-.footer{
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 15px;
-    text-align: center;
+
+@media (max-width:360px){
+    .progress{
+        font-size: 9px;
+        padding-left: 10px;
+    }
 }

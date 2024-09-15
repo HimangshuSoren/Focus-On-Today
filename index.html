@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,45 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>  
-     <h1 class="heading"><span class="green">Focus On</span><span class="brown"> Today</span></h1>
-     <div class="container">
-        <p class=" today" >Today</p>
-        <p class="quote">Raise the bar by completing your goals!</p>
-        <div class="progress-bar"></div>
-        <p class="message">Please set all three goals!</p>
 
-        <div class="goals">
-            <div class="gl goal-1">
-                <div class="circle"></div>
-                <div class="goal-wt">Add new goal...</div>
-            </div>
-            <div class="gl goal-2">
-                <div class="circle"></div>
-                <div class="goal-wt">Add new goal...</div>
-            </div>
-            <div class="gl goal-3">
-                <div class="circle"></div>
-                <div class="goal-wt">Add new goal...</div>
-            </div>
+<body>
+    <main>
+        <h1 class="title no-select">Focus On <span class="no-select">Today</span></h1>
+        <div class="app-container">
+            <h2 class="no-select subtitle"> <span> Today </span><img class="sun-icon no-select" src="Sun.svg"
+                    frameborder="0"></img>
+            </h2>
+            <p class="instruction">Raise the bar by completing your goals!</p>
+            <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+             <div class="progress-bar">
+                <div class="progress no-select">1/3 Completed</div>
+             </div>
+             <div class="error-label">Please set all three goals!</div>
+             <div class="goal-container">
+                <div class="checkbox coustom-checkbox-1">
+                    <img id="green-check-1" class="tick vis" src="icons8-checkmark.svg" alt="">
+                </div>
+                <input type="text" class="goal-input" placeholder="Add new goal...">
+
+             </div>
+             <div class="goal-container">
+                <div class="checkbox coustom-checkbox-2">
+                    <img id="green-check-2" class="tick vis" src="icons8-checkmark.svg" alt="">
+                </div>
+                <input type="text" class="goal-input" placeholder="Add new goal...">
+
+             </div>
+             <div class="goal-container">
+                <div class="checkbox coustom-checkbox-3">
+                    <img id="green-check-3" class="tick vis" src="icons8-checkmark.svg" alt="">
+                </div>
+                <input type="text" class="goal-input" placeholder="Add new goal...">
+             </div>
+             <p class="quote">"Move one step ahead, today!"</p>
+             <p class="credits">Recreated with ❤️ by Himangshu</p>
         </div>
-        <div class="motivation">"Move one step ahead, today"</div>
-        <div class="footer">Recreated with  ❤️ by Himangshu</div>
-     </div>
-    
+    </main>
+
 </body>
+
 </html>
