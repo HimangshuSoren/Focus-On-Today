@@ -37,7 +37,7 @@ body {
 .sun-icon {
     vertical-align: middle;
     margin-left: 16px;
-    animation: rotate 10s linear infinite;
+    animation: rotate 12s linear infinite;
 }
 .sun-face{
     width: 20px;
@@ -67,7 +67,8 @@ main {
 
 .progress {
     height: 100%;
-    width: 33.3%;
+    overflow: hidden;
+    width: 94%;
     background-color: rgba(72, 163, 0, 1);
     border-radius: 20px;
     font-weight: 400;
@@ -154,11 +155,13 @@ main {
 }
 
 .green-bg {
+    overflow: hidden;
+    border-radius: 50%;
     border-color: rgba(72, 163, 0, 1);
     background-color: rgba(72, 163, 0, 1);
 }
 
-.green-text {
+.complete {
     color: rgba(72, 163, 0, 1);
     text-decoration: underline;
 }
