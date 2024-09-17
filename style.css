@@ -37,12 +37,18 @@ body {
 .sun-icon {
     vertical-align: middle;
     margin-left: 16px;
-    animation: rotate 5s linear infinite;
+    animation: rotate 10s linear infinite;
 }
-
-    
-  
-
+.sun-face{
+    width: 20px;
+    vertical-align: middle;
+    position: relative;
+    left: -40px;
+}
+.image-container{
+    position: relative;
+    display: inline;
+}
 main {
     margin: 16px;
     /* padding-bottom: 52px; */
@@ -151,19 +157,21 @@ main {
     border-color: rgba(72, 163, 0, 1);
     background-color: rgba(72, 163, 0, 1);
 }
-.green-text{
+
+.green-text {
     color: rgba(72, 163, 0, 1);
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 @keyframes rotate {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 @media (max-width: 768px) {
     .title {
@@ -180,11 +188,14 @@ main {
 
     .sun-icon {
         margin-left: 8px;
-        width: 35px;  
+        width: 35px;
     }
-    .goal-container{
-        margin-bottom: 35px; /*  */
-        height: 65px; /*  */
+
+    .goal-container {
+        margin-bottom: 35px;
+        /*  */
+        height: 65px;
+        /*  */
     }
 
     .progress,
@@ -201,8 +212,13 @@ main {
         font-size: 12px;
         font-weight: 400;
     }
-    .goal-input{
+
+    .goal-input {
         width: 65%;
+    }
+    .sun-face{
+        width: 11px;
+        left: -28px;
     }
 
 }
