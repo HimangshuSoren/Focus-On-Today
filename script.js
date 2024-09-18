@@ -17,3 +17,13 @@ checkIconList.forEach((element) => { //---->[function for all 3 checkboxes]
 })
 
 
+goalList.forEach((goal)=>{
+    goal.addEventListener('input',(event)=>{
+        event.stopPropagation()
+        event.target.classList.remove('complete')
+        event.target.parentElement.firstElementChild.classList.remove('green-bg')
+    })
+})
+
+
+
