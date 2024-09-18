@@ -60,6 +60,7 @@ main {
 }
 
 .progress-bar {
+    overflow: hidden;
     height: 30px;
     background-color: rgba(72, 163, 0, 0.1);
     border-radius: 20px;
@@ -169,7 +170,6 @@ main {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
