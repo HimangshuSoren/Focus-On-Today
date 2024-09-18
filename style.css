@@ -68,7 +68,7 @@ main {
 .progress {
     height: 100%;
     overflow: hidden;
-    width: 94%;
+    max-width: 93%;
     background-color: rgba(72, 163, 0, 1);
     border-radius: 20px;
     font-weight: 400;
