@@ -7,22 +7,22 @@ let inputCount = 0
 
 checkIconList.forEach((element) => { //---->[function for all 3 checkboxes]
     element.addEventListener('click', (event) => {
-        if ([...goalList].every((inputField) => {return inputField.value.trim()})) {
+        if ([...goalList].every((inputField) => { return inputField.value.trim() })) {
             progress.classList.remove('vis')
-            if([...event.target.parentElement.classList].includes('green-bg')){
-                count --
-                progress.style.width = `${count*33.33}%`
+            if ([...event.target.parentElement.classList].includes('green-bg')) {
+                count--
+                progress.style.width = `${count * 33.33}%`
                 goalCount.innerHTML = count
             }
-            else{
+            else {
                 count++
                 goalCount.innerHTML = count
-                progress.style.width = `${count*33.33}%`
+                progress.style.width = `${count * 33.33}%`
             }
-            if(count==0){
+            if (count == 0) {
                 progress.classList.add('vis')
             }
-            inputCount=0
+            inputCount = 0
             document.querySelector('.error-label').classList.add('vis')
             event.target.parentElement.classList.toggle('green-bg')
             event.target.parentElement.nextElementSibling.classList.toggle('complete')
@@ -36,27 +36,34 @@ checkIconList.forEach((element) => { //---->[function for all 3 checkboxes]
 })
 
 
-goalList.forEach((goal)=>{
-    goal.addEventListener('input',(event)=>{
+goalList.forEach((goal) => {
+    goal.addEventListener('input', (event) => {
         event.stopPropagation()
         event.target.classList.remove('complete')
         event.target.parentElement.firstElementChild.classList.remove('green-bg')
-        if(count>0 && inputCount!=1){
+        if (count > 0 && inputCount != 1) {
             count--
             goalCount.innerHTML = count
-            progress.style.width = `${count*33.33}%`
+            progress.style.width = `${count * 33.33}%`
             inputCount++
         }
-        if(count==0){
+        if (count == 0) {
             progress.classList.add('vis')
         }
 
     })
 })
 
-goalList.forEach((goal)=>{
-    goal.addEventListener('focus',(e)=>{
-        inputCount = 0
+goalList.forEach((goal) => {
+    goal.addEventListener('focus', (e) => {
+        if([...e.currentTarget.parentElement.firstElementChild.classList].includes('green-bg')){
+            inputCount = 0
+
+        }
+        else{
+            inputCount = 1
+        }
+        
     })
 })
 
