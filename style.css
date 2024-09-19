@@ -69,7 +69,7 @@ main {
 .progress {
     height: 100%;
     overflow: hidden;
-    max-width: 100%;
+    width: 0%;
     background-color: rgba(72, 163, 0, 1);
     border-radius: 20px;
     font-weight: 400;
@@ -78,6 +78,10 @@ main {
     padding-left: 40px;
     display: flex;
     align-items: center;
+    transition: width 0.3s ease;
+}
+.goal-count-statement{
+    visibility: hidden;
 }
 
 .error-label {
@@ -152,6 +156,7 @@ main {
 
 .vis {
     visibility: hidden;
+    transition: all 0.3s ease;
 }
 
 .green-bg {
@@ -165,6 +170,7 @@ main {
     color: rgba(72, 163, 0, 1);
     text-decoration:underline;
 }
+
 
 @keyframes rotate {
     0% {
