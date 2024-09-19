@@ -163,7 +163,7 @@ main {
 
 .complete {
     color: rgba(72, 163, 0, 1);
-    text-decoration: underline;
+    text-decoration:underline;
 }
 
 @keyframes rotate {
