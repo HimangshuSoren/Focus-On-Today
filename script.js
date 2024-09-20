@@ -110,6 +110,3 @@ goalList.forEach((goal) => { //---->[event Listener to check if the checkbox cor
         }
     })
 })
-
-
-
