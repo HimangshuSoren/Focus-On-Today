@@ -16,9 +16,9 @@ checkIconList.forEach((element) => { //---->[set the button checked or unchecked
 
 if (localStorage.countCompletedGoals > 0) { //---->[set the width of progress bar according to the no of goals completed before refreshing the tab]
     progress.classList.remove('vis')
-    setTimeout(()=>{
+    setTimeout(() => {
         goalCountSpan.classList.remove('goal-count-statement')
-    },350)
+    }, 350)
     progress.style.width = `${localStorage.countCompletedGoals * 33.33}%`
     goalCount.innerHTML = localStorage.countCompletedGoals
     count = localStorage.countCompletedGoals
@@ -27,7 +27,7 @@ if (localStorage.countCompletedGoals > 0) { //---->[set the width of progress ba
 goalList.forEach((element) => {  //---->[set the saved data of input stored in local storage]
     if (`${localStorage[element.id]}`.trim() != '') {
         element.value = `${localStorage.getItem(`${element.id}`)}`.trim()
-        if (`${element.value}` == 'null' ) {
+        if (`${element.value}` == 'null') {
             element.value = ''
         }
     }
@@ -40,7 +40,7 @@ checkIconList.forEach((element) => { //---->[function (click event listener) for
     element.addEventListener('click', (event) => {
         if ([...goalList].every((inputField) => { return inputField.value.trim() })) {
             progress.classList.remove('vis')
-            
+
             if ([...event.target.parentElement.classList].includes('green-bg')) {
                 count--
                 progress.style.width = `${count * 33.33}%`
@@ -50,14 +50,14 @@ checkIconList.forEach((element) => { //---->[function (click event listener) for
                 count++
                 goalCount.innerHTML = count
                 progress.style.width = `${count * 33.33}%`
-                setTimeout(()=>{
+                setTimeout(() => {
                     goalCountSpan.classList.remove('goal-count-statement')
-                },350)
+                }, 350)
             }
             if (count == 0) {
                 goalCountSpan.classList.add('goal-count-statement')
                 progress.classList.add('vis')
-                
+
             }
             inputCount = 0
             document.querySelector('.error-label').classList.add('vis')
@@ -93,8 +93,8 @@ goalList.forEach((goal) => { //---->[mark the checkbox unchecked if any new inpu
             localStorage.countCompletedGoals--
         }
         if (count == 0) {
-                goalCountSpan.classList.add('goal-count-statement')
-                progress.classList.add('vis')
+            goalCountSpan.classList.add('goal-count-statement')
+            progress.classList.add('vis')
         }
         localStorage.setItem(`${event.target.previousElementSibling.firstElementChild.id}`, false)
     })

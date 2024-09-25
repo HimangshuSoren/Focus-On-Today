@@ -39,16 +39,19 @@ body {
     margin-left: 16px;
     animation: rotate 12s linear infinite;
 }
-.sun-face{
+
+.sun-face {
     width: 20px;
     vertical-align: middle;
     position: relative;
     left: -40px;
 }
-.image-container{
+
+.image-container {
     position: relative;
     display: inline;
 }
+
 main {
     margin: 16px;
     /* padding-bottom: 52px; */
@@ -80,7 +83,8 @@ main {
     align-items: center;
     transition: width 0.3s ease;
 }
-.goal-count-statement{
+
+.goal-count-statement {
     visibility: hidden;
 }
 
@@ -168,14 +172,14 @@ main {
 
 .complete {
     color: rgba(72, 163, 0, 1);
-    text-decoration:underline;
+    text-decoration: underline;
 }
-
 
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -224,7 +228,8 @@ main {
     .goal-input {
         width: 65%;
     }
-    .sun-face{
+
+    .sun-face {
         width: 11px;
         left: -28px;
     }
